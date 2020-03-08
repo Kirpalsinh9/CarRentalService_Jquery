@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rental Car Service App</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Rental Car Services </h1>
+    <h2>List of Cars</h2>
+
+
+    <ol>
+        <li id="Audi"><button class="btn btn-info btn-sm" type="submit">Audi</button></li>
+        <li id="Bently"><button class="btn btn-info btn-sm" type="submit">Bently</button></li>
+        <li id="Tesla"><button class="btn btn-info btn-sm" type="submit"> Tesla</button></li>
+        <li id="Hyundai"><button class="btn btn-info btn-sm" type="submit"> Hyundai</button></li>
+        <li id="Benz"><button class="btn btn-info btn-sm" type="submit">Benz</button></li>
+    </ol>
+    <div id="main"></div>
+
+    <div id="main2">
+        <button id="allcars" class="btn btn-info btn-sm" type="submit">All Cars!</button>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#allcars").click(function () {
+            $("ol").show()
+            $("#main").hide()
+            $("#main2").hide()
+        })
+        $("#Audi").click(function () {
+            $("#main").show()
+            $("#main").html('<div class="card" style="width: 20rem;"> <img src = "Assets/Audi.jpg"><div class="card-body"><h5>Audi</h5><p>Color:Black<br/>Price:150$CAD</p></div></div >')
+            $("ol").hide()
+            $("#main2").show()
+
+        })
+        $("#Bently").click(function () {
+            $("#main").show()
+            $("#main2").show()
+            $("#main").html('<div class="card" style="width: 20rem;"> <img src = "Assets/Bently.jpg"><div class="card-body"><h5>Bently</h5><p>Color:Blue<br/>Price:300$CAD</p></div></div >')
+            $("ol").hide()
+
+        })
+        $("#Tesla").click(function () {
+            $("#main").show()
+            $("#main2").show()
+            $("#main").html('<div class="card" style="width: 20rem;"> <img src = "Assets/Tesla.jpg"><div class="card-body"><h5>Tesla</h5><p>Color:Red<br/>Price:150$CAD</p></div></div >')
+            $("ol").hide()
+        })
+        $("#Hyundai").click(function () {
+            $("#main").show()
+            $("#main2").show()
+            $("#main").html('<div class="card" style="width: 20rem;"> <img src = "Assets/Hyundai.jpg"><div class="card-body"><h5>Hyundai</h5><p>Color:Black<br/>Price:100$CAD</p></div></div >')
+            $("ol").hide()
+        })
+        $("#Benz").click(function () {
+            $("#main").show()
+            $("#main2").show()
+            $("#main").html('<div class="card" style="width: 20rem;"> <img src = "Assets/Benz.jpeg"><div class="card-body"><h5>Benz</h5><p>Color:Black<br/>Price:150$CAD</p></div></div >')
+            $("ol").hide()
+        })
+    })
+</script>
+
+</html>
